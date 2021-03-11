@@ -12,14 +12,14 @@ def index(request):
         'num_speeches': num_speeches,
         'num_speakers': num_speakers,
     }
-    return render(request, "Speeches/index.html", context=context)    
+    return render(request, "speeches/index.html", context=context)    
     
         
 def speech(request):
     context = {
         "speak" : Speech.objects.all()
     } 
-    return render(request, "Speeches/speech.html", context)
+    return render(request, "speeches/speech.html", context)
   
 
 
@@ -29,7 +29,7 @@ def speaker(request):
     context = {
         "speaker" : Speaker.objects.all()
     }
-    return render(request, "Speeches/speaker.html", context) 
+    return render(request, "speeches/speaker.html", context) 
   
 
 
